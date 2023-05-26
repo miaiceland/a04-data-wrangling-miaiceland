@@ -1,0 +1,130 @@
+---
+title: "HELPmiss (Data Verbs) Activity"
+author: "YOUR NAME HERE"
+output: html_notebook
+---
+
+
+## Set Up:
+
+```{r message=FALSE}
+rm(list = ls())     # clean up your R environment
+
+# load packages
+library(tidyverse)  # includes lots of data verbs like `group_by()` and `summarise()`
+library(mosaicData) # includes the `HELPmiss` data set 
+
+
+# Load the `HELPmiss` data set into our RStudio environment
+data("HELPmiss", package = "mosaicData")
+
+```
+
+## Helpful links: 
+
+- Look though the DC Textbook for `tidyverse` functions. 
+- Check out some of these RStudio cheat sheets:
+  - <https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf> 
+  - <https://www.rstudio.com/resources/cheatsheets/>
+  - <https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Tidyverse+Cheat+Sheet.pdf>
+  
+
+
+
+## Task 1: Data Description
+
+*Write several sentences (or a bullet list) describing the HELP Study and the resulting `HELPmiss` data.  Your description should investigate basic data provenance (e.g., Who, What, When, Where, Why, How), explain the setting for the data, specify what each case represents in the data, and remark on inclusion/exclusion criteria.* 
+
+
+- investigate by searching R help documentation
+- there's a research paper cited where additional detail is provided
+
+
+
+## Task 2: Basic Summaries 
+
+*Produce one or more R expressions involving `summarize()` and `HELPmiss` to address each of the following prompts.*
+
+1. number of people (cases) in `HELPmiss` study
+
+```{r}
+#Your code here 
+
+```
+
+2. total number of times in the past 6 months entered a detox program (measured at baseline) for all the people in `HELPmiss`. 
+
+```{r}
+#Your code here 
+
+```
+
+
+3. mean time (in days) to first use of any substance post-detox for all the people in `HELPmiss`
+
+
+```{r}
+#Your code here 
+
+```
+
+
+
+## Task 3: Group Summaries  
+
+*Repeat task 2 above, but add code chunks to calculate result group-by-group according to each prompt (i.e. each promt should have three statements for each of the three prompts in task 2).  Be sure to show all R code and write a sentence or two about what you observe in the results. Remember, you can add multiple statistics inside `summary`.* 
+
+
+- males versus females
+- homeless or not
+- substance
+- break down the homeless versus housed further, by sex
+- homeless versus housed broken down by substance
+
+### males versus females
+```{r}
+#Your code here
+
+```
+
+### homeless or not
+```{r}
+#Your code here
+
+```
+
+
+### substance
+```{r}
+#Your code here
+
+```
+
+### homeless versus housed broken down by sex
+```{r}
+#Your code here
+
+```
+
+### homeless versus housed broken down by substance
+```{r}
+#Your code here
+
+```
+
+
+
+## Task 4: Data Visualization & Observations
+
+*Include one or more interesting plots from this data set involving at least 3 variables per plot. Write a few sentences to explain the story that your plot tells about these data.  You can expand on the relationships that you studied in Task 2, or you can explore a different group of variables in `HELPmiss` that show something interesting. Remember to use the interactive commands in the console, generate the R commands that will reproduce your plot, and then paste the R commands into an R chunk in the RMarkdown file.*  
+
+*Remember, you can use* `esquisser` *or* `mplot` *in your console. But only include the ggplot code in this Rmd document.*
+
+
+```{r}
+# Your Code here.
+
+```
+
+
+
