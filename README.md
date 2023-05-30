@@ -27,6 +27,6 @@
     - 1 point for including a useful plot with at least 3 variables represented in ggplot code.
     - 1 point for including comments
     - (-0.5) points if `mplot` or `esquisser` is included in the submission. 
-- [1 point] Changes pushed to GitHub with atleaset 3 commits. 
+- [1 point] Changes pushed to GitHub with at least 3 commits. 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "HELPmiss (Data Verbs) Activity"
-author: "YOUR NAME HERE"
+author: "Mia Iceland"
 output: html_notebook
 ---
 
@@ -48,14 +48,16 @@ data("HELPmiss", package = "mosaicData")
 1. number of people (cases) in `HELPmiss` study
 
 ```{r}
-#Your code here 
+HELPmiss %>%
+  summarise(count= n())
 
 ```
 
 2. total number of times in the past 6 months entered a detox program (measured at baseline) for all the people in `HELPmiss`. 
 
 ```{r}
-#Your code here 
+HELPmiss %>%
+  summarise(sum(e2b, na.rm=TRUE))
 
 ```
 
@@ -64,7 +66,8 @@ data("HELPmiss", package = "mosaicData")
 
 
 ```{r}
-#Your code here 
+HELPmiss %>%
+  summarise(mean(daysanysub, na.rm=TRUE))
 
 ```
 
@@ -72,7 +75,7 @@ data("HELPmiss", package = "mosaicData")
 
 ## Task 3: Group Summaries  
 
-*Repeat task 2 above, but add code chunks to calculate result group-by-group according to each prompt (i.e. each promt should have three statements for each of the three prompts in task 2).  Be sure to show all R code and write a sentence or two about what you observe in the results. Remember, you can add multiple statistics inside `summary`.* 
+*Repeat task 2 above, but add code chunks to calculate result group-by-group according to each prompt (i.e. each prompt should have three statements for each of the three prompts in task 2).  Be sure to show all R code and write a sentence or two about what you observe in the results. Remember, you can add multiple statistics inside `summary`.* 
 
 
 - males versus females
