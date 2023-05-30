@@ -35,10 +35,19 @@ data("HELPmiss", package = "mosaicData")
 
 *Write several sentences (or a bullet list) describing the HELP Study and the resulting `HELPmiss` data.  Your description should investigate basic data provenance (e.g., Who, What, When, Where, Why, How), explain the setting for the data, specify what each case represents in the data, and remark on inclusion/exclusion criteria.* 
 
-
-- investigate by searching R help documentation
-- there's a research paper cited where additional detail is provided
-
+- Where: Boston
+- When: 2003
+- Why: a trial on a clinic's ability to pair primary care with an adult's health evaluation
+- How: a baseline interview with follow-up interviews every 6 months for 2 years
+- Case: adults with no primary care physician
+  - they were recruited from a detoxification unit
+  - went through a general assessment, then an intervention and primary care
+  - 470 participants
+- Data Criteria:
+  - adults, speak English or Spanish
+  - alcohol, heroin, or cocaine being the patients first or second drug of choice
+  - lives close to the primary care facility or are homeless
+  - couldn't already have a primary care, dementia, plans to leave the area, or pregnant 
 
 
 ## Task 2: Basic Summaries 
