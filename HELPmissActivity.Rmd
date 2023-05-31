@@ -13,12 +13,12 @@ rm(list = ls())     # clean up your R environment
 # load packages
 library(tidyverse)  # includes lots of data verbs like `group_by()` and `summarise()`
 library(mosaicData) # includes the `HELPmiss` data set 
-
+library(esquisse)
 
 # Load the `HELPmiss` data set into our RStudio environment
 data("HELPmiss", package = "mosaicData")
 
-```
+e```
 
 ## Helpful links: 
 
@@ -194,9 +194,17 @@ HELPmiss %>%
 
 
 ```{r}
-# Your Code here.
+ggplot(HELPmiss) +
+  aes(x = substance, y = daysanysub) +
+  geom_boxplot(fill = "#112446") +
+  labs(
+    y = "time (days) using substance post-detox",
+    title = "Substance Use vs. Use of Substance Post-Detox"
+  ) +
+  theme_minimal() +
+  facet_wrap(vars(sex))
 
 ```
-
+My graph breaks down how long takes for each sex and substance to relapse post-detox. Through my graph, I found that, on average, it takes the shortest amount of time for both sexes to reuse heroin and the longest time to reuse cocaine. The graph also shows, on average, that other than alcohol, it takes a shorter amount of time for men to relapse their cocaine and heroin addiction. Women, however, undergo alcohol abuse quicker post-detox than men. 
 
 
