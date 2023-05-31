@@ -45,7 +45,7 @@ data("HELPmiss", package = "mosaicData")
   - 470 participants
 - Data Criteria:
   - adults, speak English or Spanish
-  - alcohol, heroin, or cocaine being the patients first or second drug of choice
+  - alcohol, heroin, or cocaine being the patient's first or second drug of choice
   - lives close to the primary care facility or are homeless
   - couldn't already have a primary care, dementia, plans to leave the area, or pregnant 
 
@@ -88,39 +88,99 @@ HELPmiss %>%
 
 
 - males versus females
+  - I noticed that there are more male participants in this study than females. Also, more males than females had previously entered a detox program before 6 months before this trial started. Finally, men are faster to start reusing a substance post-detox. 
 - homeless or not
+  - More people in this study have a home than those that are homeless. More homeless people than people with homes had previously entered a detox program before 6 months before this trial started. Lastly, homeless people are faster to start reusing a substance post-detox.
 - substance
+  - The most abused substance in this trial is alcohol. Alcohol abusers are the largest group of people who had previously entered a detox program before 6 months before this trial started. Finally, people who use heroin are faster to start reusing their "substance of choice" post-detox. 
 - break down the homeless versus housed further, by sex
+  - The greatest number of people in this study are housed males. Also, homeless males are the largest group of people who had previously entered a detox program before 6 months before this trial started. Lastly, homeless males are faster to start reusing their abused substance post-detox. 
 - homeless versus housed broken down by substance
+  - The greatest number of people in this study are homeless and abuse alcohol. Homeless alcohol abusers are the largest group of people who had previously entered a detox program before 6 months before this trial started. Housed heroin users are faster to start reusing heroin post-detox. 
 
 ### males versus females
 ```{r}
-#Your code here
+
+HELPmiss %>%
+  group_by(sex) %>%
+  summarise(count= n())
+
+HELPmiss %>%
+  group_by(sex) %>%
+  summarise(sum(e2b, na.rm=TRUE))
+
+HELPmiss %>%
+  group_by(sex) %>%
+  summarise(mean(daysanysub, na.rm=TRUE))
 
 ```
 
 ### homeless or not
 ```{r}
-#Your code here
+
+HELPmiss %>%
+  group_by(homeless) %>%
+  summarise(count= n())
+
+HELPmiss %>%
+  group_by(homeless) %>%
+  summarise(sum(e2b, na.rm=TRUE))
+
+HELPmiss %>%
+  group_by(homeless) %>%
+  summarise(mean(daysanysub, na.rm=TRUE))
 
 ```
 
 
 ### substance
 ```{r}
-#Your code here
+
+HELPmiss %>%
+  group_by(substance) %>%
+  summarise(count= n())
+
+HELPmiss %>%
+  group_by(substance) %>%
+  summarise(sum(e2b, na.rm=TRUE))
+
+HELPmiss %>%
+  group_by(substance) %>%
+  summarise(mean(daysanysub, na.rm=TRUE))
 
 ```
 
 ### homeless versus housed broken down by sex
 ```{r}
-#Your code here
+
+HELPmiss %>%
+  group_by(sex, homeless) %>%
+  summarise(count= n())
+
+HELPmiss %>%
+  group_by(sex, homeless) %>%
+  summarise(sum(e2b, na.rm=TRUE))
+
+HELPmiss %>%
+  group_by(sex, homeless) %>%
+  summarise(mean(daysanysub, na.rm=TRUE))
 
 ```
 
 ### homeless versus housed broken down by substance
 ```{r}
-#Your code here
+
+HELPmiss %>%
+  group_by(homeless, substance) %>%
+  summarise(count= n())
+
+HELPmiss %>%
+  group_by(homeless, substance) %>%
+  summarise(sum(e2b, na.rm=TRUE))
+
+HELPmiss %>%
+  group_by(homeless, substance) %>%
+  summarise(mean(daysanysub, na.rm=TRUE))
 
 ```
 
